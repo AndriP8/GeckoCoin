@@ -1,11 +1,11 @@
-import Header from "components/header";
-import Navbar from "components/navbar";
+import LayoutHeader from "components/header";
+import NavbarTabs from "components/navbarTabs";
 
 function App() {
   return (
     <div className="bg-gray-100 h-screen w-full">
-      <Header />
-      <Navbar />
+      <LayoutHeader />
+      <NavbarTabs />
     </div>
   );
 }
