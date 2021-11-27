@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Utilities */
+
+h1 {
+  @apply text-2xl font-bold md:text-4xl;
+}
+
+h2 {
+  @apply text-xl font-bold md:text-3xl;
+}
+
+h3 {
+  @apply text-lg font-bold md:text-2xl;
+}
+
+h4 {
+  @apply text-base font-bold md:text-lg;
+}
+
+/* Customize components DaisyUI */
+
+.btn-outline.btn-accent {
+  @apply bg-transparent  text-gray-600 hover:text-gray-600 hover:border-green-light hover:bg-gray-200;
+}
+
+/* Styled based on viewport */
+
 @layer base {
   * {
     @apply m-0 p-0 box-border;
@@ -18,4 +44,16 @@
 
 .navbar-item {
   @apply text-xs font-medium text-gray-700 px-3 cursor-pointer hover:text-green-light;
+}
+
+.wrap-items-stats {
+  @apply px-2 font-bold whitespace-nowrap flex;
+}
+
+.items-tabs-hover {
+  @apply hover:text-gray-700 hover:border-b-2 hover:border-gray-400;
+}
+
+tr.marked-cap > th {
+  @apply bg-red-800;
 }
