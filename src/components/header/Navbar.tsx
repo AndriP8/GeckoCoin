@@ -9,7 +9,7 @@ function Navbar() {
             className="w-36 h-[38px]"
           />
         </div>
-        <div className="flex-none  hidden px-2 mx-2 lg:flex">
+        <div className="flex-none hidden px-2 mx-2 lg:flex">
           <div className="flex items-center">
             <a href="/" className="navbar-item">
               Coins
@@ -41,7 +41,7 @@ function Navbar() {
       <div className="w-full lg:w-auto">
         <input
           type="text"
-          className="p-2 rounded-lg border border-gray-300 outline lg:w-72 w-full"
+          className="p-2 rounded-lg border bg-gray-100 border-gray-300 outline lg:w-72 w-full"
           placeholder="Search"
         />
       </div>
