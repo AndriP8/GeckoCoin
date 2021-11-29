@@ -1,12 +1,19 @@
+import { QueryClientProvider, QueryClient } from "react-query";
 import LayoutHeader from "components/header";
 import NavbarTabs from "components/navbarTabs";
+import Homepage from "pages/Homepage";
+
+const query = new QueryClient();
 
 function App() {
   return (
-    <div className="bg-gray-100 h-screen w-full">
-      <LayoutHeader />
-      <NavbarTabs />
-    </div>
+    <QueryClientProvider client={query}>
+      <div className="bg-gray-100 w-full">
+        <LayoutHeader />
+        <NavbarTabs />
+        <Homepage />
+      </div>
+    </QueryClientProvider>
   );
 }
 
