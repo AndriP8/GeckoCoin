@@ -1,4 +1,5 @@
 import { FaRegStar } from "react-icons/fa";
+import NumberFormat from "react-number-format";
 import { MarketCapTypes } from "types";
 import { useQuery } from "react-query";
 import axios from "axios";
@@ -23,7 +24,7 @@ function TableItem() {
     formatPercent = Number.parseFloat(percent).toFixed(1);
 
     if (percent > 0) {
-      return <p className="text-green-600">{formatPercent}%</p>;
+      return <p className="text-green-light">{formatPercent}%</p>;
     } else {
       return <p className="text-red-600">{formatPercent}%</p>;
     }
@@ -62,7 +63,14 @@ function TableItem() {
                   </div>
                 </div>
               </td>
-              <td>item.current_price</td>
+              <td>
+                <NumberFormat
+                  value={item.current_price}
+                  displayType="text"
+                  thousandSeparator={true}
+                  prefix="$"
+                />
+              </td>
               <td>
                 <Percentage
                   percent={item.price_change_percentage_1h_in_currency}
@@ -78,8 +86,22 @@ function TableItem() {
                   percent={item.price_change_percentage_7d_in_currency}
                 />
               </td>
-              <td>item.total_volume</td>
-              <td>item.market_cap</td>
+              <td>
+                <NumberFormat
+                  value={item.total_volume}
+                  displayType="text"
+                  thousandSeparator={true}
+                  prefix="$"
+                />
+              </td>
+              <td>
+                <NumberFormat
+                  value={item.market_cap}
+                  displayType="text"
+                  thousandSeparator={true}
+                  prefix="$"
+                />
+              </td>
             </tr>
           ))}
         </tbody>
