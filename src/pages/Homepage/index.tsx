@@ -1,5 +1,7 @@
 import { FiCornerRightDown } from "react-icons/fi";
+import Summary from "./Summary";
 import TableItem from "./TableItem";
+import TrendingCoin from "./TrendingCoin";
 
 function Homepage() {
   return (
@@ -33,6 +35,8 @@ function Homepage() {
         </div>
       </div>
       <TableItem />
+      <TrendingCoin />
+      <Summary />
     </>
   );
 }
