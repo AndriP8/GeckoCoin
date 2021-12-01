@@ -57,3 +57,7 @@ h4 {
 tr.marked-cap > th {
   @apply bg-red-800;
 }
+
+.card {
+  @apply rounded-md shadow-md border-0;
+}

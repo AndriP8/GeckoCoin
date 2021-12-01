@@ -9,5 +9,12 @@ export interface MarketCapTypes {
   price_change_percentage_7d_in_currency: number;
   total_volume: number;
   market_cap: number;
-  // length: any;
+}
+interface TrendingCoinTypes {
+  name: string;
+  small: string;
+}
+
+export interface TrendingCoinItemsTypes {
+  item: TrendingCoinTypes;
 }

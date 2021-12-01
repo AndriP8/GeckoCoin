@@ -8,3 +8,7 @@ export const getMarketCap = async () => {
     `${ROOT_API}/${VERSION_API}/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&price_change_percentage=1h%2C24h%2C7d`
   );
 };
+
+export const getTrendingCoin = async () => {
+  return axios.get(`${ROOT_API}/${VERSION_API}/search/trending`);
+};
