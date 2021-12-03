@@ -65,3 +65,11 @@ h6 {
 .items-tabs-hover {
   @apply hover:text-gray-700 hover:border-b-2 hover:border-gray-400;
 }
+
+ul.footer-item li {
+  @apply my-3;
+}
+
+.mini-border-right {
+  @apply border-l-[1.5px] border-gray-400;
+}
