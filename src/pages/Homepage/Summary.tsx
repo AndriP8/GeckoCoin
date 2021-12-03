@@ -1,6 +1,6 @@
 function Summary() {
   return (
-    <div className="px-4">
+    <div className="px-4 pb-20">
       <div>
         <h3>What is cryptocurrency market cap?</h3>
         <p className="py-6">
@@ -40,8 +40,15 @@ function Summary() {
         <h3>Is it possible to check crypto prices on mobile?</h3>
         <p className="py-6">
           Yes, you can check crypto prices on mobile by using the CoinGecko app
-          on <span className="text-green-light">iOS</span> and{" "}
-          <span className="text-green-light">Android</span>.
+          on{" "}
+          <a href="/">
+            <span className="text-green-light">iOS</span>
+          </a>{" "}
+          and{" "}
+          <a href="/">
+            <span className="text-green-light">Android</span>
+          </a>
+          .
         </p>
       </div>
       <div>
