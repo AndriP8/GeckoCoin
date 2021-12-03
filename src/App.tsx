@@ -1,20 +1,18 @@
 import { QueryClientProvider, QueryClient } from "react-query";
-import LayoutHeader from "components/header";
-import NavbarTabs from "components/navbarTabs";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "pages/Homepage";
-import Footer from "components/footer";
 
 const query = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={query}>
-      <div className="bg-gray-100 w-full">
-        <LayoutHeader />
-        <NavbarTabs />
-        <Homepage />
-        <Footer />
-      </div>
+      <Router>
+        <Routes>
+          <Route index element={<Homepage />} />
+          <Route path="/:page" element={<Homepage />} />
+        </Routes>
+      </Router>
     </QueryClientProvider>
   );
 }
