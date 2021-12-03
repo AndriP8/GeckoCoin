@@ -73,3 +73,15 @@ ul.footer-item li {
 .mini-border-right {
   @apply border-l-[1.5px] border-gray-400;
 }
+
+.pagination button.btn {
+  @apply text-gray-700 text-[13px] font-normal border-gray-300 rounded bg-transparent;
+}
+
+.pagination button.btn-active {
+  @apply bg-gray-300 border-gray-300 text-gray-700;
+}
+
+button.btn-pagin-hover {
+  @apply hover:bg-green-light hover:text-white;
+}
