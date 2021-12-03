@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Utilities */
+/* Typography */
 
 h1 {
   @apply text-2xl font-bold md:text-4xl;
@@ -20,13 +20,25 @@ h4 {
   @apply text-base font-bold md:text-lg;
 }
 
+h5 {
+  @apply text-sm font-bold md:text-base;
+}
+
+h6 {
+  @apply text-sm;
+}
+
 /* Customize components DaisyUI */
 
 .btn-outline.btn-accent {
   @apply bg-transparent  text-gray-600 hover:text-gray-600 hover:border-green-light hover:bg-gray-200;
 }
 
-/* Styled based on viewport */
+.card {
+  @apply rounded-md shadow-md border-0;
+}
+
+/* Styles on viewport */
 
 @layer base {
   * {
@@ -52,12 +64,4 @@ h4 {
 
 .items-tabs-hover {
   @apply hover:text-gray-700 hover:border-b-2 hover:border-gray-400;
-}
-
-tr.marked-cap > th {
-  @apply bg-red-800;
-}
-
-.card {
-  @apply rounded-md shadow-md border-0;
 }
