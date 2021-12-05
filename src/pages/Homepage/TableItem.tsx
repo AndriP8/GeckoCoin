@@ -29,6 +29,8 @@ function TableItem() {
 
     if (percent > 0) {
       return <p className="text-green-light">{formatPercent}%</p>;
+    } else if (percent === null) {
+      return <p>?</p>;
     } else {
       return <p className="text-red-600">{formatPercent}%</p>;
     }
