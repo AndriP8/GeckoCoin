@@ -5,17 +5,20 @@ import React from "react";
 import { useQuery } from "react-query";
 import { getMarketCap } from "service/homepage";
 import { useNavigate } from "react-router-dom";
+import Pagination from "./Pagination";
 
 function TableItem() {
-  const [page, setPage] = React.useState(1);
+  const params = new URLSearchParams(window.location.search).get("page");
+
+  const [page, setPage] = React.useState(Number(params));
 
   const navigate = useNavigate();
 
-  const { data } = useQuery(["market_cap", page], () => getMarketCap(page), {
+  const { data } = useQuery(["market_cap", params], () => getMarketCap(page), {
     refetchInterval: 30000,
   });
 
-  const handlePage = (number: number): any => {
+  const handlePage = (number: number) => {
     navigate(`/?page=${number}`);
     setPage(number);
   };
@@ -120,42 +123,43 @@ function TableItem() {
         </table>
       </div>
       <div className="btn-group px-4 justify-start lg:justify-center my-8 pagination">
-        <button
-          className="btn btn-sm btn-pagin-hover"
-          onClick={() => handlePage(page - 1)}
-        >
-          Prev
-        </button>
-        <button
-          className="btn btn-sm btn-pagin-hover btn-active"
-          onClick={() => handlePage(1)}
-        >
-          1
-        </button>
-        <button
-          className="btn btn-sm btn-pagin-hover"
-          onClick={() => handlePage(2)}
-        >
-          2
-        </button>
-        <button
-          className="btn btn-sm btn-pagin-hover"
-          onClick={() => handlePage(3)}
-        >
-          3
-        </button>
-        <button
-          className="btn btn-sm btn-pagin-hover"
-          onClick={() => handlePage(4)}
-        >
-          4
-        </button>
-        <button
-          className="btn btn-sm btn-pagin-hover"
-          onClick={() => handlePage(page + 1)}
-        >
-          Next
-        </button>
+        <Pagination
+          handlePage={() => handlePage(page - 1)}
+          page={"Prev"}
+          disabled={page === 1}
+        />
+        <Pagination
+          handlePage={() => handlePage(1)}
+          page={1}
+          active={page === 1}
+        />
+        <Pagination
+          handlePage={() => handlePage(2)}
+          page={2}
+          active={page === 2}
+        />
+        <Pagination
+          handlePage={() => handlePage(3)}
+          page={3}
+          active={page === 3}
+        />
+        <Pagination
+          handlePage={() => handlePage(4)}
+          page={4}
+          active={page === 4}
+        />
+        <Pagination
+          handlePage={() => handlePage(4)}
+          page={5}
+          active={page === 5}
+        />
+        <Pagination handlePage={() => handlePage(4)} page={"..."} disabled />
+        <Pagination
+          handlePage={() => handlePage(114)}
+          page={114}
+          active={page === 114}
+        />
+        <Pagination handlePage={() => handlePage(page + 1)} page={"Prev"} />
       </div>
     </>
   );
