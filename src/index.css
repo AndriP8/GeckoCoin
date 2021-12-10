@@ -89,3 +89,7 @@ button.btn-pagin-hover {
 .breadcrumbs > ul > li > a.noUnderline:hover {
   @apply no-underline;
 }
+
+a.active {
+  @apply border-b-2 border-green-light hover:border-green-light text-black hover:text-green-light;
+}
