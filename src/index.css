@@ -85,3 +85,7 @@ ul.footer-item li {
 button.btn-pagin-hover {
   @apply hover:bg-green-light hover:text-white;
 }
+
+.breadcrumbs > ul > li > a.noUnderline:hover {
+  @apply no-underline;
+}
