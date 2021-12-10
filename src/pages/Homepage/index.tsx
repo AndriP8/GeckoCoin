@@ -1,4 +1,5 @@
 import Page from "components/layout";
+import NavbarTabs from "components/navbarTabs";
 import { FiCornerRightDown } from "react-icons/fi";
 import Summary from "./Summary";
 import TableItem from "./TableItem";
@@ -7,6 +8,7 @@ import TrendingCoin from "./TrendingCoin";
 function Homepage() {
   return (
     <Page>
+      <NavbarTabs />
       <div className="px-4">
         <div className="flex items-center justify-start py-4">
           <h3 className="text-gray-700">Cryptocurrency Prices by Market Cap</h3>
