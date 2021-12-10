@@ -5,11 +5,11 @@ function NavbarTabs() {
     <div className="mx-4 border-b border-gray-300 overflow-x-scroll lg:overflow-auto">
       <div className="flex items-center justify-start text-gray-500 font-medium">
         <a
-          href="/"
+          href="/portfolio"
           className="flex items-center pr-4 py-4 border-b-2 border-transparent items-tabs-hover whitespace-nowrap"
         >
           <FaStar className="text-yellow-500" />
-          <span className="pl-2">Portofolio</span>
+          <span className="pl-2">Portfolio</span>
         </a>
         <a
           href="/"
