@@ -12,3 +12,9 @@ export const getMarketCap = async (page: number) => {
 export const getTrendingCoin = async () => {
   return axios.get(`${ROOT_API}/${VERSION_API}/search/trending`);
 };
+
+export const getCoinDetails = async (coinId: string) => {
+  return axios.get(
+    `${ROOT_API}/${VERSION_API}/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`
+  );
+};
