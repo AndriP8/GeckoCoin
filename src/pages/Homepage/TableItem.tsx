@@ -1,11 +1,11 @@
+import React from "react";
+import Pagination from "./Pagination";
 import NumberFormat from "react-number-format";
 import { FaRegStar } from "react-icons/fa";
 import { MarketCapTypes } from "types";
-import React from "react";
 import { useQuery } from "react-query";
 import { getMarketCap } from "service/homepage";
 import { useNavigate } from "react-router-dom";
-import Pagination from "./Pagination";
 
 function TableItem() {
   const params = new URLSearchParams(window.location.search).get("page");
@@ -23,9 +23,9 @@ function TableItem() {
     setPage(number);
   };
 
-  const Percentage = ({ percent }: { percent: any }) => {
-    let formatPercent: any;
-    formatPercent = Number.parseFloat(percent).toFixed(1);
+  const Percentage = ({ percent }: { percent: string | number }) => {
+    let newNum = percent === null ? "0" : percent.toString();
+    let formatPercent = Number.parseFloat(newNum).toFixed(1);
 
     if (percent > 0) {
       return <p className="text-green-light">{formatPercent}%</p>;
@@ -63,18 +63,23 @@ function TableItem() {
                 </th>
                 <td>
                   <div className="flex items-center">
-                    <div className="lg:flex lg:items-center lg:w-4/5 w-max text-left">
+                    <div className="flex items-center w-4/5 text-left">
                       <img
                         src={item.image}
                         className="w-5 h-5"
                         alt="Coin-name"
                       />
-                      <span className="font-bold ml-4 whitespace-normal hidden lg:inline">
-                        {item.name}
-                      </span>
+                      <a href={`/coins/${item.id}`}>
+                        <span className="font-bold ml-4 whitespace-normal hidden lg:inline hover:underline">
+                          {item.name}
+                        </span>
+                        <span className="uppercase text-left font-bold ml-4 whitespace-normal lg:hidden inline hover:underline">
+                          {item.symbol}
+                        </span>
+                      </a>
                     </div>
                     <div>
-                      <p className="uppercase text-left font-bold lg:font-normal ml-2">
+                      <p className="uppercase text-left font-bold hidden lg:inline ml-2">
                         {item.symbol}
                       </p>
                     </div>
