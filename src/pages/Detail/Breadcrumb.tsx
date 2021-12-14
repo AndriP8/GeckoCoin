@@ -1,8 +1,9 @@
-import { useLocation } from "react-router-dom";
+import React from "react";
+import { DetailsContext } from "pages/Detail";
 
 const Breadcrumb = () => {
-  const location = useLocation();
-  const page = location.pathname.split("").splice(7).join("");
+  const details = React.useContext(DetailsContext);
+  console.log(details);
 
   return (
     <div className="text-sm breadcrumbs p-4 font-medium">
@@ -12,7 +13,7 @@ const Breadcrumb = () => {
             Coins
           </a>
         </li>
-        <li className="text-gray-500 capitalize">{page}</li>
+        <li className="text-gray-500">{details?.name}</li>
       </ul>
     </div>
   );
