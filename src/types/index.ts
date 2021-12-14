@@ -18,3 +18,25 @@ interface TrendingCoinTypes {
 export interface TrendingCoinItemsTypes {
   item: TrendingCoinTypes;
 }
+
+export interface MarketDataDetailsTypes {
+  current_price: {
+    btc: number;
+    usd: number;
+  };
+  circulating_supply: number;
+  total_supply: number;
+  max_supply: number;
+}
+
+export interface CoinDetailsTypes {
+  id: string;
+  categories: string[];
+  market_cap_rank: string;
+  image: {
+    small: string;
+  };
+  name: string;
+  symbol: string;
+  market_data: MarketDataDetailsTypes;
+}
