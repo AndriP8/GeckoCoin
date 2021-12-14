@@ -54,26 +54,28 @@ function TableItem() {
           </thead>
           <tbody>
             {data?.data.map((item: MarketCapTypes, idx: number) => (
-              <tr key={item.id} className="hover bg-white">
-                <th className="flex items-center">
-                  <FaRegStar />
-                  <span className="pl-2 font-normal">
-                    {page > 1 ? idx + page * 100 - 100 + 1 : idx + 1}
-                  </span>
+              <tr key={item.id} className="hover bg-white h-full">
+                <th>
+                  <div className="flex items-center">
+                    <FaRegStar />
+                    <span className="pl-2 font-normal">
+                      {page > 1 ? idx + page * 100 - 100 + 1 : idx + 1}
+                    </span>
+                  </div>
                 </th>
                 <td>
                   <div className="flex items-center">
                     <div className="flex items-center w-4/5 text-left">
                       <img
                         src={item.image}
-                        className="w-5 h-5"
+                        className="w-5 h-5 mr-4"
                         alt="Coin-name"
                       />
                       <a href={`/coins/${item.id}`}>
-                        <span className="font-bold ml-4 whitespace-normal hidden lg:inline hover:underline">
+                        <span className="font-bold whitespace-normal hidden lg:inline hover:underline">
                           {item.name}
                         </span>
-                        <span className="uppercase text-left font-bold ml-4 whitespace-normal lg:hidden inline hover:underline">
+                        <span className="uppercase text-left font-bold whitespace-normal lg:hidden inline hover:underline">
                           {item.symbol}
                         </span>
                       </a>
