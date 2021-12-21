@@ -93,3 +93,7 @@ button.btn-pagin-hover {
 a.active {
   @apply border-b-2 border-green-light hover:border-green-light text-black hover:text-green-light;
 }
+
+.progress::-webkit-progress-value {
+  @apply bg-gradient-to-r from-[#ffd553] to-[#79bb00];
+}

@@ -29,6 +29,19 @@ export interface MarketDataDetailsTypes {
   max_supply: number;
 }
 
+interface CoinLinksTypes {
+  homepage: string[];
+  blockchain_site: string[];
+  repos_url: {
+    github: string[];
+  };
+  official_forum_url: string[];
+  chat_url: string[];
+  twitter_screen_name: string;
+  facebook_username: string;
+  telegram_channel_identifier: string;
+  subreddit_url: string;
+}
 export interface CoinDetailsTypes {
   id: string;
   categories: string[];
@@ -36,6 +49,7 @@ export interface CoinDetailsTypes {
   image: {
     small: string;
   };
+  links: CoinLinksTypes;
   name: string;
   symbol: string;
   market_data: MarketDataDetailsTypes;
