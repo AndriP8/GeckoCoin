@@ -3,7 +3,6 @@ import { DetailsContext } from "pages/Detail";
 
 const Breadcrumb = () => {
   const details = React.useContext(DetailsContext);
-  console.log(details);
 
   return (
     <div className="text-sm breadcrumbs p-4 font-medium">
