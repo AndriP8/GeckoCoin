@@ -32,9 +32,7 @@ const MarketDataDetails = () => {
             24 Hour Trading Vol{" "}
             <AiOutlineQuestionCircle className="inline text-sm" />
           </span>
-          <span className="text-gray-900 font-medium">
-            $30,698,362,241 null
-          </span>
+          <span className="text-gray-900 font-medium">$30,698,362,241</span>
         </div>
         {details?.market_data.max_supply && (
           <div className="flex items-center justify-between py-3 border-b border-gray-300">

@@ -22,13 +22,13 @@ function NavbarTabs() {
         <NavItem route="/" active={page === ""}>
           Coins
         </NavItem>
-        <NavItem route="/recently_added" active={page === "recently_added"}>
+        <NavItem route="/#" active={page === "recently_added"}>
           Recently Added
         </NavItem>
-        <NavItem route="/trending" active={page === "trending"}>
+        <NavItem route="/#" active={page === "trending"}>
           Large Movers
         </NavItem>
-        <NavItem route="/categories" active={page === "categories"}>
+        <NavItem route="/#" active={page === "categories"}>
           Categories
         </NavItem>
         <NavItem route="/#" itemIcon>

@@ -41,7 +41,7 @@ function Navbar() {
       <div className="w-full lg:w-auto">
         <input
           type="text"
-          className="p-2 rounded-lg border bg-gray-100 border-gray-300 outline lg:w-72 w-full"
+          className="p-2 rounded-lg border bg-gray-100 border-gray-300 lg:w-72 w-full"
           placeholder="Search"
         />
       </div>
