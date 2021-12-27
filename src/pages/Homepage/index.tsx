@@ -3,7 +3,7 @@ import NavbarTabs from "components/navbarTabs";
 import MarketCap from "./MarketCap";
 import Summary from "./Summary";
 import TableItem from "./TableItem";
-import TrendingCoin from "./TrendingCoin";
+import TrendingCoin from "components/TrendingCoin";
 
 function Homepage() {
   return (

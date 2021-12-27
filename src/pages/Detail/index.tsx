@@ -7,6 +7,7 @@ import { useQuery } from "react-query";
 import { getCoinDetails } from "service/homepage";
 import { useLocation } from "react-router-dom";
 import { CoinDetailsTypes } from "types";
+import TrendingCoin from "components/TrendingCoin";
 
 export const DetailsContext = React.createContext({} as CoinDetailsTypes);
 
@@ -25,6 +26,7 @@ function CoinDetails() {
           <InformationDetails />
         </div>
       </DetailsContext.Provider>
+      <TrendingCoin />
     </Page>
   );
 }
