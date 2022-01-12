@@ -12,7 +12,10 @@ function TrendingCoin() {
         <h3 className="text-gray-700">Trending Coins</h3>
         <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4 my-10">
           {data?.data.coins.map(({ item }: TrendingCoinItemsTypes) => (
-            <div className="card shadow-2xl lg:card-side bg-primary text-primary-content">
+            <div
+              key={item.name}
+              className="card shadow-2xl lg:card-side bg-primary text-primary-content"
+            >
               <div className="card-body p-4 bg-white">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center">
