@@ -158,7 +158,7 @@ function TableItem() {
           active={page === 4}
         />
         <Pagination
-          handlePage={() => handlePage(4)}
+          handlePage={() => handlePage(5)}
           page={5}
           active={page === 5}
         />
@@ -168,7 +168,12 @@ function TableItem() {
           page={114}
           active={page === 114}
         />
-        <Pagination handlePage={() => handlePage(page + 1)} page={"Prev"} />
+        <Pagination
+          handlePage={() =>
+            page === 0 ? handlePage(page + 2) : handlePage(page + 1)
+          }
+          page={"Next"}
+        />
       </div>
     </>
   );
